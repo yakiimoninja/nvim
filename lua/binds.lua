@@ -33,4 +33,4 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR><cmd>NoNeckPain<CR>")
 
 -- Format Code
-vim.keymap.set("n", "<leader>fc", "<cmd>LspZeroFormat<CR>")
+vim.keymap.set("n", "<leader>lc", "<cmd>LspZeroFormat<CR>")
