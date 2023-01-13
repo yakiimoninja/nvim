@@ -8,22 +8,55 @@ return {
             -- or leave it empty to  the default settings
             -- refer to the configuration section below
         }
+        -- Custom binds
         local wk = require("which-key")
         wk.register({
-            f = {
-                "File / Format", -- optional group name
-                f = { "Find file" }, -- create a binding with label
-                g = { "Find git file" }, -- create a binding with label
-                s = { "Find string in file" }, -- create a binding with label
-                c = { "Format code" }, -- create a binding with label
-            },
-            s = {
-                "Replace"
-            },
-            x = {
-                "Make executable"
-            }
-        }, { prefix = "<leader>" })
-    end
+            ["<leader>"] = {
+                f = {
+                    "File / Format",
+                    f = { "Find file" },
+                    g = { "Find git file" },
+                    s = { "Find string in file" },
+                },
+                l = {
+                    "Lsp",
+                    a = { "Code actions" },
+                    c = { "Format code" },
+                    d = { "Diagnostics" },
+                    r = { "Rename" },
+                    s = { "Workspace symbols" },
 
+                },
+                s = {
+                    "Replace"
+                },
+                x = {
+                    "Make executable"
+                }
+            },
+            ["g"] = {
+                "Go",
+                d = { "Definition" },
+                r = { "References" }
+            },
+            ["K"] = {
+                "Info"
+            },
+            ["[d"] = {
+                "Previous diagnostic"
+            },
+            ["]d"] = {
+                "Next diagnostic"
+            },
+            ["<C-h>"] = {
+                "Signature help"
+            }
+        })
+    end
 }
+
+
+--vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+--vim.keymap.set("n", "[d", vim.diagnostic.goto_next, opts)
+--vim.keymap.set("n", "]d", vim.diagnostic.goto_prev, opts)
+--vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
