@@ -2,7 +2,6 @@ return {
 
     -- Center window
     "shortcuts/no-neck-pain.nvim",
-    cmd = "NoNeckPain",
     version = "*",
     config = function()
 
