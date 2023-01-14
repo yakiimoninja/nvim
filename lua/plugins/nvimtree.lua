@@ -174,5 +174,10 @@ return {
             command = "if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif",
             nested = true,
         })
+
+
+        -- Nvim Tree Toggle bind
+        vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR><cmd>NoNeckPain<CR>")
     end
+
 }

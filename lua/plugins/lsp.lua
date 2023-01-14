@@ -273,6 +273,8 @@ return {
             vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
             vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, opts)
             vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
+            -- Format Code
+            vim.keymap.set("n", "<leader>lc", "<cmd>LspZeroFormat<CR>")
         end)
 
         lsp.setup()
