@@ -175,6 +175,8 @@ return {
             nested = true,
         })
 
+        -- nvim-tree first file open fix
+        vim.o.splitright = true
 
         -- Nvim Tree Toggle bind
         vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR><cmd>NoNeckPain<CR>")

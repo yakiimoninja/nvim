@@ -52,6 +52,3 @@ vim.opt.fileencoding = "utf-8"
 
 -- removes ~ from buffers
 vim.opt.fillchars:append { eob = " " }
-
--- nvim-tree first file open fix
-vim.o.splitright = true
