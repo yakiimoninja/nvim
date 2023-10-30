@@ -4,7 +4,8 @@ return {
     dependencies = {
         -- LSP Support
         "neovim/nvim-lspconfig",
-        { "williamboman/mason.nvim",
+        {
+            "williamboman/mason.nvim",
             config = function()
                 require("mason").setup({
                     ui = {
@@ -70,11 +71,13 @@ return {
                         download_url_template = "https://github.com/%s/releases/download/%s/%s",
                     },
                 })
-            end },
+            end
+        },
         "williamboman/mason-lspconfig.nvim",
 
         -- Autocompletion
-        { "hrsh7th/nvim-cmp",
+        {
+            "hrsh7th/nvim-cmp",
             config = function()
                 local cmp_status_ok, cmp = pcall(require, "cmp")
                 if not cmp_status_ok then
@@ -209,7 +212,8 @@ return {
                 }
                 capabilities = vim.lsp.protocol.make_client_capabilities()
                 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
-            end },
+            end
+        },
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
         "hrsh7th/cmp-nvim-lsp",
@@ -221,12 +225,11 @@ return {
         "rafamadriz/friendly-snippets",
     },
     config = function()
-
         local lsp = require("lsp-zero")
 
         lsp.preset("recommended")
         lsp.ensure_installed({
-            "sumneko_lua",
+            "lua_ls",
             "rust_analyzer",
         })
 
