@@ -73,8 +73,17 @@ return {
                 })
             end
         },
-        "williamboman/mason-lspconfig.nvim",
-
+        {
+            "williamboman/mason-lspconfig.nvim",
+            config = function()
+                require("mason-lspconfig").setup({
+                    ensure_installed = {
+                        "lua_ls",
+                        "rust_analyzer"
+                    }
+                })
+            end
+        },
         -- Autocompletion
         {
             "hrsh7th/nvim-cmp",
@@ -227,11 +236,11 @@ return {
     config = function()
         local lsp = require("lsp-zero")
 
-        lsp.preset("recommended")
-        lsp.ensure_installed({
-            "lua_ls",
-            "rust_analyzer",
-        })
+        --lsp.preset("recommended")
+        --lsp.ensure_installed({
+        --    "lua_ls",
+        --    "rust_analyzer",
+        --})
 
         local cmp = require("cmp")
         local cmp_mappings = lsp.defaults.cmp_mappings({
