@@ -10,51 +10,29 @@ return {
         }
         -- Custom binds
         local wk = require("which-key")
-        wk.register({
-            ["<leader>"] = {
-                f = {
-                    "File / Format",
-                    f = { "Find file" },
-                    g = { "Find git file" },
-                    s = { "Find string in file" },
-                },
-                l = {
-                    "Lsp",
-                    a = { "Code actions" },
-                    c = { "Format code" },
-                    d = { "Diagnostics" },
-                    r = { "Rename" },
-                    s = { "Workspace symbols" },
-
-                },
-                s = {
-                    "Replace"
-                },
-                x = {
-                    "Make executable"
-                }
-            },
-            ["g"] = {
-                "Go",
-                d = { "Definition" },
-                r = { "References" }
-            },
-            ["K"] = {
-                "Info"
-            },
-            ["[d"] = {
-                "Previous diagnostic"
-            },
-            ["]d"] = {
-                "Next diagnostic"
-            },
-            ["<C-h>"] = {
-                "Signature help"
-            }
-        })
+        wk.add({
+    		{ "<C-h>", desc = "Signature help" },
+    		{ "<leader>f", desc = "File / Format" },
+    		{ "<leader>ff", desc = "Find file" },
+    		{ "<leader>fg", desc = "Find git file" },
+    		{ "<leader>fs", desc = "Find string in file" },
+    		{ "<leader>l", desc = "Lsp" },
+    		{ "<leader>la", desc = "Code actions" },
+    		{ "<leader>lc", desc = "Format code" },
+    		{ "<leader>ld", desc = "Diagnostics" },
+    		{ "<leader>lr", desc = "Rename" },
+    		{ "<leader>ls", desc = "Workspace symbols" },
+    		{ "<leader>s", desc = "Replace" },
+    		{ "<leader>x", desc = "Make executable" },
+    		{ "K", desc = "Info" },
+    		{ "[d", desc = "Previous diagnostic" },
+    		{ "]d", desc = "Next diagnostic" },
+    		{ "g", desc = "Go" },
+    		{ "gd", desc = "Definition" },
+    		{ "gr", desc = "References" },
+	})
     end
 }
-
 
 --vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 --vim.keymap.set("n", "[d", vim.diagnostic.goto_next, opts)
