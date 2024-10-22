@@ -2,7 +2,6 @@ return {
     "numToStr/FTerm.nvim",
     config = function()
 
-
         -- Code Runner - execute commands in a floating terminal
         --        local runners = { lua = "lua" }
 
