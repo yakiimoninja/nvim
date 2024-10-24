@@ -14,13 +14,21 @@ return {
         --                require("FTerm").scratch({ cmd = { exec, buf } })
         --            end
         --       end)
-        vim.keymap.set("n", "<leader>rr", function()
-            require("FTerm").scratch({ cmd = { "cargo", "run" } })
-        end)
+        -- CTRL D to exit 
+        vim.keymap.set("n", "<leader>t",
+            function()
+                tui:toggle()
+            end, { desc = "Terminal"})
+        
+        vim.keymap.set("n", "<leader>tr",
+            function()
+                require("FTerm").scratch({ cmd = { "cargo", "run" } })
+            end, { desc = "Terminal run code"})
 
-        vim.keymap.set("n", "<leader>g", function()
-            require("FTerm").scratch({ cmd = { "lazygit" } })
-        end)
+        vim.keymap.set("n", "<leader>tg",
+            function()
+                require("FTerm").scratch({ cmd = { "lazygit" } })
+            end, { desc = "Terminal git"})
 
         local fterm = require("FTerm")
 
@@ -30,9 +38,5 @@ return {
                 width = 0.9
             }
         })
-        -- CTRL D to exit 
-        vim.keymap.set("n", "<leader>t", function()
-            tui:toggle()
-        end)
     end
 }
