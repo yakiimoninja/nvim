@@ -15,7 +15,7 @@ return {
         --            end
         --       end)
         -- CTRL D to exit 
-        vim.keymap.set("n", "<leader>t",
+        vim.keymap.set("n", "<leader>tt",
             function()
                 tui:toggle()
             end, { desc = "Terminal"})
