@@ -34,7 +34,8 @@ return {
     		{ "g", desc = "Go to" },
     		{ "gd", desc = "Definition" },
     		{ "gr", desc = "References" },
-	})
+	    })
+
     end
 }
 
