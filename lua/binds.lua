@@ -25,3 +25,6 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- Making scripts executable from inside vim
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+-- Format JSON bind
+vim.keymap.set("n", "<leader>fj", "<cmd>%!jq<CR>", { desc= "Format JSON file"})
