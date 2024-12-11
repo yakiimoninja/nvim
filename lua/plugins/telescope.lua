@@ -20,5 +20,12 @@ return {
                 builtin.grep_string({ search = vim.fn.input("Ripgrep find: ") });
             end,
             { desc = "Find file by string"})
+        vim.keymap.set("n", "<leader>en",
+            function ()
+                builtin.find_files {
+                    cwd = vim.fn.stdpath("config")
+                }
+            end,
+            { desc = "Edit nvim config files"})
     end
 }
