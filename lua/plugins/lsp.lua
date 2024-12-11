@@ -28,6 +28,7 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "rust_analyzer",
+                --"jq", json formatter
             },
             automatic_installation = true,
             handlers = {
