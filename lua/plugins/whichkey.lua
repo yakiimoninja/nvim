@@ -17,9 +17,6 @@ return {
         wk.add({
     		{ "<C-h>", desc = "Signature help" },
     		{ "<leader>f", group = "File / Format" },
-    		--{ "<leader>ff", desc = "Find file" },
-    		--{ "<leader>fg", desc = "Find git file" },
-    		--{ "<leader>fs", desc = "Find string in file" },
     		{ "<leader>l", desc = "Lsp" },
     		--{ "<leader>la", desc = "Code actions" },
     		--{ "<leader>lc", desc = "Format code" },
