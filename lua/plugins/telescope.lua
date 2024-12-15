@@ -18,14 +18,13 @@ return {
         vim.keymap.set("n", "<leader>fs",
             function()
                 builtin.grep_string({ search = vim.fn.input("Ripgrep find: ") });
-            end,
-            { desc = "Find file by string"})
-        vim.keymap.set("n", "<leader>en",
+            end, { desc = "Find file by string"})
+
+        vim.keymap.set("n", "<leader>fn",
             function ()
                 builtin.find_files {
                     cwd = vim.fn.stdpath("config")
                 }
-            end,
-            { desc = "Edit nvim config files"})
+            end, { desc = "Fing nvim config file"})
     end
 }
