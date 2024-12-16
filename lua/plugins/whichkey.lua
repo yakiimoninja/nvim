@@ -23,8 +23,6 @@ return {
     		--{ "<leader>ld", desc = "Diagnostics" },
     		--{ "<leader>lr", desc = "Rename" },
     		--{ "<leader>ls", desc = "Workspace symbols" },
-    		{ "<leader>s", desc = "Replace" },
-    		{ "<leader>x", desc = "Make executable" },
     		{ "K", desc = "Info" },
     		{ "[d", desc = "Previous diagnostic" },
     		{ "]d", desc = "Next diagnostic" },
