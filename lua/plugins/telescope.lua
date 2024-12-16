@@ -25,6 +25,6 @@ return {
                 builtin.find_files {
                     cwd = vim.fn.stdpath("config")
                 }
-            end, { desc = "Fing nvim config file"})
+            end, { desc = "Find nvim config file"})
     end
 }
