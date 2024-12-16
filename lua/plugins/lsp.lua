@@ -8,16 +8,25 @@ return {
 
     config = function()
 
-        -- example using `opts` for defining servers
-        local opts = {
-            servers = {
-                lua_ls = {},
-                rust_analyzer = {},
-            }
+        -- Server list to be installed
+        local servers = {
+            lua_ls = {},
+            rust_analyzer = {},
         }
 
+        -- Server list to string table
+        local function tabletostring()
+            local string = {}
+            for server in pairs(servers) do
+                table.insert(string, tostring(server))
+            end
+            return string
+        end
+        -- String table on servers names for `ensure_installed`
+        local servers_string = tabletostring()
+
         local lspconfig = require("lspconfig")
-        for server, config in pairs(opts.servers) do
+        for server, config in pairs(servers) do
             -- passing config.capabilities to blink.cmp merges with the capabilities in your
             -- `opts[server].capabilities, if you've defined it
             config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
@@ -27,11 +36,8 @@ return {
         require("fidget").setup({})
         require("mason").setup({})
         require("mason-lspconfig").setup({
-            ensure_installed = {
-                "lua_ls",
-                "rust_analyzer",
-                --"jq", json formatter
-            },
+            ensure_installed = servers_string
+            ,
             automatic_installation = true,
             handlers = {
                 function(server_name) -- default handler (optional)
