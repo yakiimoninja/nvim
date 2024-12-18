@@ -1,4 +1,8 @@
 return {
-    -- Visual indent vertical lines
-    "lukas-reineke/indent-blankline.nvim"
+    -- Visual indentation vertical lines
+    "lukas-reineke/indent-blankline.nvim",
+
+    config = function ()
+        require("ibl").setup()
+    end
 }
