@@ -20,7 +20,8 @@ return {
             ["<Tab>"] = { function(cmp)
                 if cmp.snippet_active() then return cmp.accept()
                 else return cmp.select_next() end
-                end, "snippet_forward", "fallback"},
+                end, "snippet_forward", "fallback"
+            },
         },
 		appearance = {
 		    -- Sets the fallback highlight groups to nvim-cmp's highlight groups
@@ -52,10 +53,12 @@ return {
 		    default = { "lsp", "path", "snippets", "buffer" },
 		    -- optionally disable cmdline completions
 		    -- cmdline = {},
+            min_keyword_length = 1,
 		},
-
-		  -- experimental signature help support
-		  signature = { enabled = true }
+        -- experimental signature help support
+        signature = {
+            enabled = true
+        },
 	},
 	-- allows extending the providers array elsewhere in your config
 	-- without having to redefine it
