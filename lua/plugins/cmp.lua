@@ -23,6 +23,12 @@ return {
                 end, "snippet_forward", "fallback"
             },
         },
+        -- to be removed with following updates
+        completion = {
+            trigger = {
+                show_on_insert_on_trigger_character = false,
+            },
+        },
 		appearance = {
 		    -- Sets the fallback highlight groups to nvim-cmp's highlight groups
 		    -- Useful for when your theme doesn't support blink.cmp
