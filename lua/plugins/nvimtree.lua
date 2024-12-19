@@ -1,7 +1,7 @@
 return {
     -- Folder tree and icons
     "nvim-tree/nvim-tree.lua",
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
 
         local function open_nvim_tree()
@@ -90,7 +90,7 @@ return {
                 },
                 icons = {
                     padding = " ", -- one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.
-                    symlink_arrow = " >> ", --  defaults to ' ➛ '. used as a separator between symlinks' source and target.
+                    symlink_arrow = " >> ", --  defaults to " ➛ ". used as a separator between symlinks' source and target.
                     show = {
                         git = true,
                         folder = true,
@@ -129,13 +129,13 @@ return {
                 relativenumber = false,
                 -- width of the window, can be either a number (columns) or a string in `%`
                 width = 30,
-                -- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
+                -- side of the tree, can be one of "left" | "right" | "top" | "bottom"
                 side = "left",
             },
         })
 
-        --vim.api.nvim_create_autocmd('BufEnter', {
-        --    command = "if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif",
+        --vim.api.nvim_create_autocmd("BufEnter", {
+        --    command = "if winnr("$") == 1 && bufname() == "NvimTree_" . tabpagenr() | quit | endif",
         --    nested = true,
         --})
 
