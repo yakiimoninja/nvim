@@ -2,7 +2,7 @@ return {
     -- Visual indentation vertical lines
     "lukas-reineke/indent-blankline.nvim",
 
-    config = function ()
+    config = function()
         require("ibl").setup {
             scope = {
                 -- removes underline

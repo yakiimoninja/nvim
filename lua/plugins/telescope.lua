@@ -2,11 +2,14 @@ return {
 
     -- Fuzzy finder
     "nvim-telescope/telescope.nvim",
-    dependencies = { "nvim-lua/plenary.nvim",
-    { "nvim-telescope/telescope-fzf-native.nvim", build = "make" }
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+        {
+            "nvim-telescope/telescope-fzf-native.nvim",
+            build = "make"
+        }
     },
     config = function()
-
         require("telescope").setup {
             extensions = { fzf = {} }
         }
@@ -18,13 +21,13 @@ return {
         vim.keymap.set("n", "<leader>fs",
             function()
                 builtin.grep_string({ search = vim.fn.input("Ripgrep find: ") });
-            end, { desc = "Find file by string"})
+            end, { desc = "Find file by string" })
 
         vim.keymap.set("n", "<leader>fn",
-            function ()
+            function()
                 builtin.find_files {
                     cwd = vim.fn.stdpath("config")
                 }
-            end, { desc = "Find nvim config file"})
+            end, { desc = "Find nvim config file" })
     end
 }

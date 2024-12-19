@@ -3,7 +3,6 @@ return {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-
         local function open_nvim_tree()
             -- open the tree
             require("nvim-tree.api").tree.open()
@@ -89,7 +88,7 @@ return {
                     },
                 },
                 icons = {
-                    padding = " ", -- one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.
+                    padding = " ",          -- one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.
                     symlink_arrow = " >> ", --  defaults to " ➛ ". used as a separator between symlinks' source and target.
                     show = {
                         git = true,
@@ -118,10 +117,10 @@ return {
                         },
                     },
                 },
-                highlight_git = true, -- will enable file highlight for git attributes (can be used without the icons).
+                highlight_git = true,           -- will enable file highlight for git attributes (can be used without the icons).
                 highlight_opened_files = "all", -- 0 -> "none" 1 -> "icon" 2 -> "name" 3 -> "all"
-                add_trailing = true, -- append a trailing slash to folder names
-                group_empty = true, --  compact folders that only contain a single folder into one node in the file tree
+                add_trailing = true,            -- append a trailing slash to folder names
+                group_empty = true,             --  compact folders that only contain a single folder into one node in the file tree
             },
             view = {
                 -- show line numbers in tree disabled
@@ -133,7 +132,6 @@ return {
                 side = "left",
             },
         })
-
         --vim.api.nvim_create_autocmd("BufEnter", {
         --    command = "if winnr("$") == 1 && bufname() == "NvimTree_" . tabpagenr() | quit | endif",
         --    nested = true,
@@ -145,5 +143,4 @@ return {
         -- Nvim Tree Toggle bind
         vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "Nvim tree toggle" })
     end
-
 }

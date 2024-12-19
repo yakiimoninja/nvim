@@ -2,7 +2,6 @@ return {
     -- Highlights words under cursor
     "yamatsum/nvim-cursorline",
     config = function()
-
         require("nvim-cursorline").setup {
             cursorline = {
                 enable = true,

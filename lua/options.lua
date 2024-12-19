@@ -1,5 +1,4 @@
--- Neovim Settings -- 
-
+-- Neovim Settings --
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 

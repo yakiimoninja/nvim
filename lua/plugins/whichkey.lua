@@ -30,7 +30,6 @@ return {
     		{ "gd", desc = "Definition" },
     		{ "gr", desc = "References" },
 	    })
-
     end
 }
 

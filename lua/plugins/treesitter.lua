@@ -3,12 +3,11 @@ return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
-
         require("nvim-treesitter.configs").setup {
             -- A list of parser names, or "all"
             ensure_installed = { "c", "lua", "rust", "python", "bash", "go" },
 
-            -- If parser error occurs with help language 
+            -- If parser error occurs with help language
             -- https://github.com/LazyVim/LazyVim/issues/524
 
             -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -35,6 +34,5 @@ return {
 
         vim.o.foldmethod = "expr"
         vim.o.foldexpr = "nvim_treesitter#foldexpr()"
-
     end
 }
