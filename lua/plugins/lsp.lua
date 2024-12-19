@@ -8,11 +8,10 @@ return {
     },
 
     config = function()
-
         local capabilities = require("blink.cmp").get_lsp_capabilities()
 
-        require("fidget").setup({})
-        require("mason").setup({})
+        require("fidget").setup()
+        require("mason").setup()
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
@@ -35,13 +34,15 @@ return {
                                 runtime = { version = "Lua 5.1" },
                                 diagnostics = {
                                     globals = { "bit", "vim", "it", "describe", "before_each", "after_each" },
-                                }
+                                },
                             }
                         }
                     }
                 end,
-            }
+            },
         })
+
+        vim.keymap.set("n", "<Leader>lf", function() vim.lsp.buf.format() end, { desc = "Format code" })
 
         vim.diagnostic.config({
             -- update_in_insert = true,
@@ -56,4 +57,3 @@ return {
         })
     end
 }
-
