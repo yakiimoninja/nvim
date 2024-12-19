@@ -1,7 +1,7 @@
 return {
     -- Auto close parentheses brackets quotes etc.
-    'windwp/nvim-autopairs',
+    "windwp/nvim-autopairs",
     config = function()
-        require('nvim-autopairs').setup {}
+        require("nvim-autopairs").setup {}
     end
 }

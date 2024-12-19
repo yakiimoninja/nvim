@@ -3,7 +3,7 @@ return {
     "yamatsum/nvim-cursorline",
     config = function()
 
-        require('nvim-cursorline').setup {
+        require("nvim-cursorline").setup {
             cursorline = {
                 enable = true,
                 timeout = 1000,
