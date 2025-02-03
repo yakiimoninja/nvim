@@ -31,6 +31,8 @@ return {
             trigger = {
                 show_on_insert_on_trigger_character = false,
             },
+            -- Disable autocomplete in nvim command line
+            menu = { auto_show = function(ctx) return ctx.mode ~= 'cmdline' end }
         },
         appearance = {
             -- Sets the fallback highlight groups to nvim-cmp's highlight groups
@@ -40,21 +42,6 @@ return {
             -- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
             -- Adjusts spacing to ensure icons are aligned
             nerd_font_variant = "mono"
-        },
-        accept = {
-            auto_brackets = {
-                enabled = true
-            },
-            default_brackets = {
-                "(", ")",
-                "[", "]",
-                "{", "}",
-                "'", "'",
-                "\"", "\"",
-            },
-        },
-        documentation = {
-            auto_show = true,
         },
         -- experimental signature help support
         signature = {
