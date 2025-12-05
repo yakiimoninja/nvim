@@ -55,6 +55,9 @@ return {
         vim.keymap.set("n", "<Leader>lr", function() vim.lsp.buf.references() end, { desc = "References" })
         vim.keymap.set("n", "<Leader>la", function() vim.lsp.buf.code_action() end, { desc = "Actions" })
         vim.keymap.set("n", "<Leader>lD", function() vim.lsp.buf.declaration() end, { desc = "Declaration" })
+        vim.keymap.set("n", "<Leader>lh", function() vim.lsp.buf.hover() end, {desc = "Hover info"})
+        vim.keymap.set("v", "<Leader>lh", function() vim.lsp.buf.hover() end, {desc = "Hover info"})
+        vim.keymap.set("n", "<Leader>ls", function() vim.lsp.buf.signature_help() end, {desc = "Signature help"})
 
         vim.diagnostic.config({
             -- update_in_insert = true,

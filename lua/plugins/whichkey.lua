@@ -15,25 +15,22 @@ return {
         -- Custom binds
         local wk = require("which-key")
         wk.add({
-    		{ "<C-h>", desc = "Signature help" },
-    		{ "<leader>f", group = "File / Format" },
-    		{ "<leader>l", desc = "Lsp" },
-    		--{ "<leader>la", desc = "Code actions" },
-    		--{ "<leader>lc", desc = "Format code" },
-    		--{ "<leader>ld", desc = "Diagnostics" },
-    		--{ "<leader>lr", desc = "Rename" },
-    		--{ "<leader>ls", desc = "Workspace symbols" },
-    		{ "K", desc = "Info" },
-    		{ "[d", desc = "Previous diagnostic" },
-    		{ "]d", desc = "Next diagnostic" },
-    		{ "g", desc = "Go to" },
-    		{ "gd", desc = "Definition" },
-    		{ "gr", desc = "References" },
-	    })
+            { "<leader>h", group = "Git hunk" },
+            { "<leader>c", group = "Comment" },
+            { "<leader>f", group = "File / Format" },
+
+            { "<C-h>",     desc = "Signature help" },
+            { "<leader>l", desc = "Lsp" },
+            { "[d",        desc = "Previous diagnostic" },
+            { "]d",        desc = "Next diagnostic" },
+            -- { "g",         desc = "Go to" },
+            -- { "gd",        desc = "Definition" },
+            -- { "gr",        desc = "References" },
+            -- { "<leader>la", desc = "Code actions" },
+            -- { "<leader>lc", desc = "Format code" },
+            -- { "<leader>ld", desc = "Diagnostics" },
+            -- { "<leader>lr", desc = "Rename" },
+            -- { "<leader>ls", desc = "Workspace symbols" },
+        })
     end
 }
-
---vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
---vim.keymap.set("n", "[d", vim.diagnostic.goto_next, opts)
---vim.keymap.set("n", "]d", vim.diagnostic.goto_prev, opts)
---vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
