@@ -6,7 +6,7 @@ return {
         "rafamadriz/friendly-snippets",
         "L3MON4D3/LuaSnip",
     },
-    version = "v0.*",
+    version = "*",
     opts = {
         -- 'default' for mappings similar to built-in completion
         -- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
@@ -32,7 +32,7 @@ return {
                 show_on_insert_on_trigger_character = false,
             },
             -- Disable autocomplete in nvim command line
-            menu = { auto_show = function(ctx) return ctx.mode ~= 'cmdline' end }
+            -- menu = { auto_show = function(ctx) return ctx.mode ~= 'cmdline' end }
         },
         appearance = {
             -- Sets the fallback highlight groups to nvim-cmp's highlight groups
@@ -51,4 +51,8 @@ return {
     -- allows extending the providers array elsewhere in your config
     -- without having to redefine it
     --opts_extend = { "sources.default" }
+    sources = {
+        default = default_sources,
+        providers = { cmdline = {min_keyword_length = 3 }}
+    },
 }
