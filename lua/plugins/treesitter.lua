@@ -1,9 +1,8 @@
 return {
     -- Better syntax highlighting
     "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
     config = function()
-        require("nvim-treesitter.configs").setup {
+        require("nvim-treesitter").setup {
             -- A list of parser names, or "all"
             ensure_installed = { "c", "lua", "rust", "python", "bash", "go" },
 
