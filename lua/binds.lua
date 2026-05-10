@@ -27,4 +27,7 @@ vim.keymap.set("x", "p", [["_dP]], { desc = "Paste" })
 vim.keymap.set("n", "<leader>fx", "<cmd>!chmod +x %<CR>", { desc = "File to executable" }, { silent = true })
 
 -- Format JSON bind
-vim.keymap.set("n", "<leader>fj", "<cmd>%!jq<CR>", { desc= "Format JSON file"})
+vim.keymap.set("n", "<leader>fj", "<cmd>%!jq<CR>", { desc = "Format JSON file"})
+
+-- Restart nvim
+vim.keymap.set("n", "<leader>r", "<cmd>restart<CR>", { desc = "Restart neovim"})
