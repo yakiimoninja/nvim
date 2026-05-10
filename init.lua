@@ -1,3 +1,4 @@
+require("vim._core.ui2").enable({})
 require("binds")
 require("options")
 require("manager")
